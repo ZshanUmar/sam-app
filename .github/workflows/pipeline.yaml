@@ -3,15 +3,15 @@ name: Pipeline
 on:
   push:
     branches:
-      - 'main'
-      - 'feature**'
+      - "main"
+      - "feature**"
   delete:
     branches:
-      - 'feature**'
+      - "feature**"
 
 env:
   SAM_TEMPLATE: template.yaml
-  TESTING_STACK_NAME: aws-sam-cli-managed-dev-pipeline-resources
+  TESTING_STACK_NAME: sam-app-dev
   TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::077736414234:role/aws-sam-cli-managed-dev-pipel-PipelineExecutionRole-iwuueAy9dVpG
   TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::077736414234:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionRo-qoirqu4ZkQrP
   TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-dev-pipeline-r-artifactsbucket-nhr3ej70swvd
@@ -20,7 +20,7 @@ env:
   # testing "sam package" and "sam deploy" commands.
   # TESTING_IMAGE_REPOSITORY = '0123456789.dkr.ecr.region.amazonaws.com/repository-name'
   TESTING_REGION: ap-southeast-1
-  PROD_STACK_NAME: aws-sam-cli-managed-prod-pipeline-resources
+  PROD_STACK_NAME: asam-app-prod
   PROD_PIPELINE_EXECUTION_ROLE: arn:aws:iam::077736414234:role/aws-sam-cli-managed-prod-pipe-PipelineExecutionRole-2PYI85MZzbVP
   PROD_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::077736414234:role/aws-sam-cli-managed-prod--CloudFormationExecutionRo-xecGQgHYJzZt
   PROD_ARTIFACTS_BUCKET: aws-sam-cli-managed-prod-pipeline--artifactsbucket-gz7w6jis4je5
